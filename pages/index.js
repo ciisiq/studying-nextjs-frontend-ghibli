@@ -1,5 +1,6 @@
 import Footer from "@/comps/Footer";
 import NavBar from "@/comps/Navbar";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
             skills, and because I love films by studio Ghibli I put together.
             Feel free to see the list of all films{" "}
             <span className="font-bold">
-              <a href="films">[ here ]</a>
+              <Link href="/films">[ See films list ]</Link>
             </span>
           </p>
         </div>
@@ -24,6 +25,7 @@ export default function Home() {
           <img alt="studio ghibli films together" src="/peakpx.jpg"></img>
         </div>
       </div>
+
       <Footer />
     </main>
   );
