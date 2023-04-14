@@ -5,7 +5,6 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main>
-      <NavBar />
       <div className="min-h-screen flex">
         {/* Left side */}
         <div className="flex-1">
@@ -25,8 +24,6 @@ export default function Home() {
           <img alt="studio ghibli films together" src="/peakpx.jpg"></img>
         </div>
       </div>
-
-      <Footer />
     </main>
   );
 }
