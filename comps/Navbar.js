@@ -6,9 +6,15 @@ const NavBar = () => {
       <div className="logo">
         <h1>LOGO</h1>
       </div>
-      <Link href="/">Home</Link>
-      <Link href="/films">Films List</Link>
-      <Link href="/about">About</Link>
+      <Link class="a" href="/">
+        Home
+      </Link>
+      <Link class="a" href="/films">
+        Films List
+      </Link>
+      <Link class="a" href="/about">
+        About
+      </Link>
     </nav>
   );
 };
