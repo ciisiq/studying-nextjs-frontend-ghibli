@@ -22,7 +22,7 @@ export default function Home() {
         {/* Rigth side */}
         <div className="flex-1">
           <img
-            class="wallpaper"
+            className="wallpaper"
             alt="studio ghibli films together"
             src="/peakpx.jpg"
           ></img>

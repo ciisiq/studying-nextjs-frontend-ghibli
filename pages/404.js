@@ -1,6 +1,18 @@
 import Link from "next/link";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 const NotFound = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    setTimeout(() => {
+      // router.go(1) (It will go back 1 page history and +1 go futher)
+      //redirect to home page
+      router.push("/");
+    }, 3000);
+  }, []);
+
   return (
     <main className="flex gap-6 items-center">
       <div className=" flex-1 ">

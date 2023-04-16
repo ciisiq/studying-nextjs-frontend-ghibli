@@ -6,13 +6,13 @@ const NavBar = () => {
       <div className="logo">
         <img className="logo" src="/logo.png" alt="totoro logo"></img>
       </div>
-      <Link class="a" href="/">
+      <Link className="a" href="/">
         Home
       </Link>
-      <Link class="a" href="/films">
+      <Link className="a" href="/films">
         Films List
       </Link>
-      <Link class="a" href="/about">
+      <Link className="a" href="/about">
         About
       </Link>
     </nav>
