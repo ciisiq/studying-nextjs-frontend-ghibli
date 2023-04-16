@@ -12,8 +12,9 @@
 ### Deployment (not ready yet)
 
 - [Link](https://)
+- [Figma layout](https://www.figma.com/file/EZbor4vSjgpt0f4uiuNXwU/Totoro?t=tSEoZEAMrC7FPAvF-1)
 
-### Project view
+### Project pre-view
 
 ![](./public/screenshot.png)
 
@@ -21,7 +22,13 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First install all the dependencies
+
+```bash
+npm i
+```
+
+Second, run the development server:
 
 ```bash
 npm run dev
