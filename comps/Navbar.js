@@ -4,7 +4,7 @@ const NavBar = () => {
   return (
     <nav>
       <div className="logo">
-        <h1>LOGO</h1>
+        <img className="logo" src="/logo.png" alt="totoro logo"></img>
       </div>
       <Link class="a" href="/">
         Home

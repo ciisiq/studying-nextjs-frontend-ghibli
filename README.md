@@ -6,7 +6,7 @@
 
 - I am putting what I learned there with a simple project with list of films from Ghibli.
 
-- I using node.js v18.14.0 and Tailwinds for style
+- I am using node.js v18.14.0 and Tailwinds for style
   <br />
 
 ### Deployment (not ready yet)

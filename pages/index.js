@@ -1,5 +1,3 @@
-import Footer from "@/comps/Footer";
-import NavBar from "@/comps/Navbar";
 import Link from "next/link";
 
 export default function Home() {
