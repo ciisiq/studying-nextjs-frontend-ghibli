@@ -27,9 +27,7 @@ const Films = ({ films }) => {
         </h1>
         {films.map((film) => (
           <Link href={"/films/" + film.id} key={film.id}>
-            <p className={styles.single}>
-              <h3>{film.name}</h3>
-            </p>
+            <h3 className={styles.single}>{film.name}</h3>
           </Link>
         ))}
       </div>
