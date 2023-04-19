@@ -11,7 +11,7 @@
 
 ### Deployment (not ready yet)
 
-- [Link](https://)
+- [Link](https://studying-nodejs-ghibli.vercel.app/)
 - [Figma layout](https://www.figma.com/file/EZbor4vSjgpt0f4uiuNXwU/Totoro?t=tSEoZEAMrC7FPAvF-1)
 
 ### Project pre-view
