@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "../../styles/films.module.css";
+import Link from "next/link";
 
 export const getStaticProps = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -25,11 +26,11 @@ const Films = ({ films }) => {
           All films list here
         </h1>
         {films.map((film) => (
-          <div key={film.id}>
-            <a className={styles.single}>
+          <Link href={"/films/" + film.id} key={film.id}>
+            <p className={styles.single}>
               <h3>{film.name}</h3>
-            </a>
-          </div>
+            </p>
+          </Link>
         ))}
       </div>
     </>
