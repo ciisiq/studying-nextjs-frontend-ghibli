@@ -1,10 +1,10 @@
 export const getStaticPaths = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const res = await fetch("http://localhost:8080/api/films");
   const data = await res.json();
 
   const paths = data.map((film) => {
     return {
-      params: { id: film.id.toString() },
+      params: { id: film._id },
     };
   });
 
@@ -16,9 +16,10 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const id = context.params.id;
-  const res = await fetch("https://jsonplaceholder.typicode.com/users/" + id);
+  const res = await fetch("http://localhost:8080/api/films/" + id);
   const data = await res.json();
 
+  console.log(data);
   return {
     props: { film: data },
   };
@@ -28,11 +29,13 @@ const Details = ({ film }) => {
   return (
     <div>
       <h1 className="font-bold text-ft-black text-[42px] leading-none">
-        {film.name}
+        {film.title}
       </h1>
-      <p>{film.email}</p>
-      <p>{film.website}</p>
-      <p>{film.address.city}</p>
+      <p>{film.genre}</p>
+      <p>{film.release}</p>
+      <p>{film.director}</p>
+      <p>{film.synopsis}</p>
+      <p>{film.poster}</p>
     </div>
   );
 };
