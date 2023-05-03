@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "../../styles/films.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 export const getStaticProps = async () => {
   const res = await fetch("http://localhost:8080/api/films");
@@ -20,14 +21,42 @@ const Films = ({ films }) => {
       </Head>
 
       <div>
-        <h1 className="font-bold text-ft-black text-[42px] leading-none">
+        <h1 className="font-bold text-ft-black text-[42px] leading-none my-8">
           All films list here
         </h1>
-        {films.map((film) => (
-          <Link href={"/films/" + film._id} key={film._id}>
-            <h3 className={styles.single}>{film.title}</h3>
-          </Link>
-        ))}
+
+        <div className="grid grid-cols-3 grid-rows-3 gap-4">
+          {films.map((film) => (
+            <Link href={"/films/" + film._id} key={film._id}>
+              {/* <h3 className={styles.single}>{film.title}</h3> */}
+
+              <div class=" flex justify-center items-center ">
+                <div class="container flex justify-center ">
+                  <div class=" ">
+                    <div class="bg-white relative shadow-lg hover:shadow-xl transition duration-500 rounded-lg min-h-[20rem]">
+                      <Image
+                        className="rounded-t-lg max-height: 16rem max-width: fit-content "
+                        src={film.poster}
+                        alt="film poster"
+                        width={500}
+                        height={300}
+                      />
+                      <div class="py-6 px-8 rounded-lg bg-white">
+                        <h1 class="text-gray-700 font-bold text-2xl mb-3 hover:text-gray-900 hover:cursor-pointer">
+                          {film.title}
+                        </h1>
+                        <p class="text-gray-700 tracking-wide">{film.genre}</p>
+                      </div>
+                      <div class="absolute top-2 right-2 py-2 px-4 bg-white rounded-lg">
+                        <span class="text-md">❤️</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
     </>
   );
