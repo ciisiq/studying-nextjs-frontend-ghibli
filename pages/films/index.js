@@ -30,18 +30,18 @@ const Films = ({ films }) => {
             <Link href={"/films/" + film._id} key={film._id}>
               {/* <h3 className={styles.single}>{film.title}</h3> */}
 
-              <div class=" flex justify-center items-center ">
+              <div class=" h-fit p-6flex-col flex justify-center items-center ">
                 <div class="container flex justify-center ">
                   <div class=" ">
                     <div class="bg-white relative shadow-lg hover:shadow-xl transition duration-500 rounded-lg min-h-[20rem]">
                       <Image
-                        className="rounded-t-lg max-height: 16rem max-width: fit-content "
+                        className="rounded-t-lg max-h-[26rem]"
                         src={film.poster}
                         alt="film poster"
                         width={500}
                         height={300}
                       />
-                      <div class="py-6 px-8 rounded-lg bg-white">
+                      <div class="py-6 px-8 rounded-lg bg-white max-h-[9rem] min-h-[9rem]">
                         <h1 class="text-gray-700 font-bold text-2xl mb-3 hover:text-gray-900 hover:cursor-pointer">
                           {film.title}
                         </h1>
