@@ -1,7 +1,8 @@
 import Image from "next/image";
 
 export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:8080/api/films");
+  const host = process.env.DB_HOST;
+  const res = await fetch(`http://${host}:8080/api/films`);
   const data = await res.json();
 
   const paths = data.map((film) => {
@@ -17,8 +18,10 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async (context) => {
+  const host = process.env.DB_HOST;
+
   const id = context.params.id;
-  const res = await fetch("http://localhost:8080/api/films/" + id);
+  const res = await fetch(`http://${host}:8080/api/films/` + id);
   const data = await res.json();
 
   console.log(data);

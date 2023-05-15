@@ -4,7 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:8080/api/films");
+  const host = process.env.DB_HOST;
+  const username = process.env.DB_USER;
+  const passoword = process.env.DB_PASS;
+
+  const res = await fetch(`http://${host}:8080/api/films`);
   const data = await res.json();
 
   return {
@@ -22,7 +26,7 @@ const Films = ({ films }) => {
 
       <div>
         <h1 className="font-bold text-ft-black text-[42px] leading-none my-8">
-          All films list here
+          All Ghibli films
         </h1>
 
         <div className="grid grid-cols-3 grid-rows-3 gap-4">
