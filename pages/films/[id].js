@@ -1,8 +1,10 @@
 import Image from "next/image";
 
+// const dotenv = require("dotenv");
+// dotenv.config();
+
 export const getStaticPaths = async () => {
-  const host = process.env.DB_HOST;
-  const res = await fetch(`http://${host}:8080/api/films`);
+  const res = await fetch(`http://${process.env.DB_HOST}:8080/api/films`);
   const data = await res.json();
 
   const paths = data.map((film) => {

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -27,11 +28,13 @@ export default function Home() {
 
           {/* Rigth side */}
           <div className="flex-1">
-            <img
+            <Image
               className="wallpaper"
               alt="studio ghibli films together"
               src="/peakpx.jpg"
-            ></img>
+              width={501}
+              height={598}
+            />
           </div>
         </div>
       </main>

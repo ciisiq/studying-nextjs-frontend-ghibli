@@ -3,12 +3,11 @@ import styles from "../../styles/films.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
-export const getStaticProps = async () => {
-  const host = process.env.DB_HOST;
-  const username = process.env.DB_USER;
-  const passoword = process.env.DB_PASS;
+// const dotenv = require("dotenv");
+// dotenv.config();
 
-  const res = await fetch(`http://${host}:8080/api/films`);
+export const getStaticProps = async () => {
+  const res = await fetch(`http://${process.env.DB_HOST}:8080/api/films`);
   const data = await res.json();
 
   return {

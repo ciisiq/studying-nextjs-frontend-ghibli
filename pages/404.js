@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const NotFound = () => {
   const router = useRouter();
@@ -33,11 +34,13 @@ const NotFound = () => {
 
       {/* Rigth side */}
       <div className="flex-1">
-        <img
+        <Image
           class="wallpaper"
           alt="studio ghibli films together"
           src="/totoro.png"
-        ></img>
+          height={598}
+          width={501}
+        />
       </div>
     </main>
   );

@@ -5,8 +5,12 @@ const NavBar = () => {
   return (
     <nav>
       <div className="logo">
-        {/* <img className="logo" src="/logo.png" alt="totoro logo"></img> */}
-        <Image src="/logo.png" width={160} height={77} />
+        <Image
+          src="/logo.png"
+          width={160}
+          height={77}
+          alt="logo in the format of the studio ghibli totoro"
+        />
       </div>
       <Link className="a" href="/">
         Home
